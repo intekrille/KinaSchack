@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KinaSchack", "KinaSchack.csproj", "{8966D156-D947-B505-7308-AC1E08040558}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KinaSchack.Editor", "KinaSchack.Editor.csproj", "{8FB7D7DA-8B4F-69DB-2BD9-D01EFB1BC274}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8966D156-D947-B505-7308-AC1E08040558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8966D156-D947-B505-7308-AC1E08040558}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8966D156-D947-B505-7308-AC1E08040558}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8966D156-D947-B505-7308-AC1E08040558}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FB7D7DA-8B4F-69DB-2BD9-D01EFB1BC274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FB7D7DA-8B4F-69DB-2BD9-D01EFB1BC274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FB7D7DA-8B4F-69DB-2BD9-D01EFB1BC274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FB7D7DA-8B4F-69DB-2BD9-D01EFB1BC274}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {373C1BC7-EDCF-4160-B181-89F660FC45AF}
+	EndGlobalSection
+EndGlobal
