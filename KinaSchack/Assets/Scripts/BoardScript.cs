@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class BoardScript : MonoBehaviour {
 
-    private Vector3 boardOffset = new Vector3(0, 0, -4.0f);
+    //Denna klass används inte.
 
+    /*
     private Vector2 mouseOver;
     private Vector2 startDrag;
     private Vector2 endDrag;
@@ -84,7 +85,7 @@ public class BoardScript : MonoBehaviour {
             mouseOver.y = -1;
             //return;
         }
-    }
+    }*/
 
 
 }

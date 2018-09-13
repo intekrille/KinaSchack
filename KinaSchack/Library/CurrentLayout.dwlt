@@ -42,10 +42,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 681, y: 492}
+  m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 106
+  controlID: 51
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -89,8 +89,8 @@ MonoBehaviour:
     y: 0
     width: 326
     height: 454
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -206,10 +206,10 @@ MonoBehaviour:
     y: 0
     width: 1092
     height: 731
-  m_MinSize: {x: 404, y: 492}
+  m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 107
+  controlID: 52
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -230,10 +230,10 @@ MonoBehaviour:
     y: 0
     width: 1092
     height: 454
-  m_MinSize: {x: 404, y: 221}
-  m_MaxSize: {x: 8004, y: 4021}
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 108
+  controlID: 53
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -323,20 +323,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Prefab
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Prefab
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Unity games\KinaSchack\KinaSchack
+  m_LastProjectPath: C:\Unity games\KinaSchack\KinaSchack2\KinaSchack
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 580a0000
-    m_LastClickedID: 2648
-    m_ExpandedIDs: 000000008009000000ca9a3b
+    m_SelectedIDs: a20b0000
+    m_LastClickedID: 2978
+    m_ExpandedIDs: 000000007e09000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -364,7 +364,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000080090000
+    m_ExpandedIDs: 000000007e090000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -480,23 +480,23 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 9c11faff
-    m_LastClickedID: -388708
-    m_ExpandedIDs: 8013faff1416fafffe41faffda48faffa20cffffec15ffff7e1affffe6fbffff00000000040d0000780d0000d00f0000
+    m_SelectedIDs: cc0c0000
+    m_LastClickedID: 3276
+    m_ExpandedIDs: e6fbffff00000000940c0000d20c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Main Camera
-      m_OriginalName: Main Camera
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 26914
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
@@ -532,14 +532,14 @@ MonoBehaviour:
     height: 433
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 30999.297186118183
+  lastFramingTime: 360.6174672242713
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+    m_Target: {x: 361.634, y: 227.27121, z: -256.0979}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: 361.634, y: 227.27121, z: -256.0979}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -567,13 +567,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.040245224, y: -0.92488164, z: 0.36405465, w: 0.10223988}
+    m_Target: {x: -0.3607722, y: 0.030496, z: -0.011805742, w: -0.9320965}
     speed: 2
-    m_Value: {x: 0.04024493, y: -0.9248749, z: 0.364052, w: 0.10223913}
+    m_Value: {x: -0.36076683, y: 0.030495545, z: -0.011805566, w: -0.9320826}
   m_Size:
-    m_Target: 24.529568
+    m_Target: 24.529013
     speed: 2
-    m_Value: 24.529568
+    m_Value: 24.529013
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -685,7 +685,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 535.2
-    width: 1092
-    height: 267
+    y: 546.4
+    width: 1090
+    height: 256
   m_PersistentViewDataDictionary: {fileID: 0}

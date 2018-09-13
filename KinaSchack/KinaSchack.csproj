@@ -302,10 +302,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BoardScript.cs" />
     <Compile Include="Assets\Scripts\InstantiateBoard.cs" />
-    <Compile Include="Assets\Scripts\InstantiatePieces.cs" />
-    <Compile Include="Assets\Scripts\Node.cs" />
-    <Compile Include="Assets\Scripts\Pieces.cs" />
-    <Compile Include="Assets\Scripts\StateManager.cs" />
+    <Compile Include="Assets\Scripts\Movement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
