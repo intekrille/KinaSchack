@@ -35,8 +35,7 @@ public class InstantiateBoard : MonoBehaviour
 
     GameObject prefab;
 
-
-    Piece[,] board = new Piece[maxRow, maxColumn]
+    private Piece[,] board = new Piece[maxRow, maxColumn]
     {
     {
         Piece.Invalid, Piece.Invalid, Piece.Invalid, Piece.Invalid, Piece.Invalid, Piece.Invalid,
@@ -233,9 +232,8 @@ public class InstantiateBoard : MonoBehaviour
     /// <summary>
     /// Changes the colors of the tips of the star
     /// </summary>
-    public void BottomRed()
+    private void BottomRed()
     {
-        // Bottom
         board[0, 6] = Piece.Red;
         board[1, 5] = Piece.Red;
         board[1, 6] = Piece.Red;
@@ -246,10 +244,9 @@ public class InstantiateBoard : MonoBehaviour
         board[3, 5] = Piece.Red;
         board[3, 6] = Piece.Red;
         board[3, 7] = Piece.Red;
-    }
-    public void TopBlue()
+    }                                
+    private void TopBlue()
     {
-        // Top
         board[16, 6] = Piece.Blue;
         board[15, 5] = Piece.Blue;
         board[15, 6] = Piece.Blue;
@@ -260,10 +257,9 @@ public class InstantiateBoard : MonoBehaviour
         board[13, 5] = Piece.Blue;
         board[13, 6] = Piece.Blue;
         board[13, 7] = Piece.Blue;
-    }
+    }                                  
     private void LowLeftGreen()
     {
-        // Lower Left
         board[4, 0] = Piece.Green;
         board[4, 1] = Piece.Green;
         board[4, 2] = Piece.Green;
@@ -274,25 +270,23 @@ public class InstantiateBoard : MonoBehaviour
         board[6, 1] = Piece.Green;
         board[6, 2] = Piece.Green;
         board[7, 1] = Piece.Green;
-    }
+    }                            
     private void LowRightYellow()
     {
-        // Lower Right
         board[4, 9]  = Piece.Yellow;
         board[4, 10] = Piece.Yellow;
         board[4, 11] = Piece.Yellow;
         board[4, 12] = Piece.Yellow;
-        board[5, 9] = Piece.Yellow;
+        board[5, 9]  = Piece.Yellow;
         board[5, 10] = Piece.Yellow;
         board[5, 11] = Piece.Yellow;
         board[6, 10] = Piece.Yellow;
         board[6, 11] = Piece.Yellow;
         board[7, 10] = Piece.Yellow;
-    }
+    }                          
     private void UpLeftPurple()
     {
-        // Upper Left
-        board[9, 1] = Piece.Purple;
+        board[9, 1]  = Piece.Purple;
         board[10, 1] = Piece.Purple;
         board[10, 2] = Piece.Purple;
         board[11, 0] = Piece.Purple;
@@ -302,11 +296,10 @@ public class InstantiateBoard : MonoBehaviour
         board[12, 1] = Piece.Purple;
         board[12, 2] = Piece.Purple;
         board[12, 3] = Piece.Purple;
-    }
+    }                            
     private void UpRightOrange()
     {
-        // Upper Right
-        board[9, 10] = Piece.Orange;
+        board[9, 10]  = Piece.Orange;
         board[10, 10] = Piece.Orange;
         board[10, 11] = Piece.Orange;
         board[11, 9]  = Piece.Orange;
@@ -316,5 +309,40 @@ public class InstantiateBoard : MonoBehaviour
         board[12, 10] = Piece.Orange;
         board[12, 11] = Piece.Orange;
         board[12, 12] = Piece.Orange;
+    }                           
+
+    private void TryMove()
+    {
+
     }
+
+    private void Movement()
+    {
+
+    }
+
+    /*public void DetectNearbyPieces()
+    {
+        if (board[x, y] != Piece.Invalid)
+        {
+            if(board[x, y] % 2 == 0)
+            {
+                board[x + 1, y - 1]  == Piece.Empty;
+                board[x + 1, y]      == Piece.Empty;
+                board[x, y + 1]      == Piece.Empty;
+                board[x - 1, y]      == Piece.Empty;
+                board[x - 1, y - 1]  == Piece.Empty;
+                board[x, y - 1]      == Piece.Empty;
+            }
+            else
+            {
+                board[x + 1, y]      == Piece.Empty;
+                board[x + 1, y + 1]  == Piece.Empty;
+                board[x, y + 1]      == Piece.Empty;
+                board[x - 1, y]      == Piece.Empty;
+                board[x - 1, y - 1]] == Piece.Empty;
+                board[x, y - 1]      == Piece.Empty;
+            }
+        }
+    }*/
 }
