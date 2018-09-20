@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-enum Piece { Invalid, Empty, Red, Green, Blue, Yellow, Purple, Orange };
+public enum Piece { Invalid, Empty, Red, Green, Blue, Yellow, Purple, Orange };
+//public enum Colour { Red, Green, Blue, Yellow, Purple, Orange };
 
 public class InstantiateBoard : MonoBehaviour
 {
@@ -122,6 +123,89 @@ public class InstantiateBoard : MonoBehaviour
     },
     };
 
+    // I chose to use the raycast method so I don't have to place a 
+    private void Update()
+    {
+        MouseOver();
+
+    }
+
+    private void MouseOver()
+    {
+        // 
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        RaycastHit hitInfo;
+
+        if (Physics.Raycast(ray, out hitInfo))
+        {
+            GameObject ourHitObject = hitInfo.collider.transform.gameObject;
+            /*
+            if (ourHitObject.GetComponent<Pieces>().colour == Piece.Empty)
+            {
+                // We hit an empty Piece
+                MouseOverPieces(ourHitObject);
+            }
+            if (ourHitObject.GetComponent<Pieces>().colour == Piece.Red)
+            {
+                // We hit a red piece.
+                Debug.Log("Red piece");
+
+            }
+            */
+            if (ourHitObject.GetComponent<Pieces>().colour != Piece.Invalid)
+            {
+                switch (ourHitObject.GetComponent<Pieces>().colour)
+                {
+                    case Piece.Empty:
+
+                        break;
+                    case Piece.Red:
+                        Debug.Log("Yo this is a Red Piece!");
+
+                        break;
+                    case Piece.Green:
+
+                        break;
+                    case Piece.Blue:
+
+                        break;
+                    case Piece.Yellow:
+
+                        break;
+                    case Piece.Purple:
+
+                        break;
+                    case Piece.Orange:
+
+                        break;
+                    default:
+                        break;
+                }
+
+            }
+        }
+    }
+
+    private void MouseOverPieces(GameObject ourHitObject)
+    {
+        Debug.Log("Hit" + ourHitObject.name);
+        if (Input.GetMouseButton(0))
+        {
+            MeshRenderer mr = ourHitObject.GetComponentInChildren<MeshRenderer>();
+
+            // When you click on an object.
+            if (mr.material.color == Color.red)
+            {
+                mr.material.color = Color.white;
+            }
+            else
+            {
+                mr.material.color = Color.red;
+            }
+        }
+    }
+
     /// <summary>
     /// Loops through all elements in the "board"-array and instantiates them.
     /// </summary>
@@ -133,21 +217,65 @@ public class InstantiateBoard : MonoBehaviour
             {
                 if (board[x, y] != Piece.Invalid)
                 {
+                    // float xPos = x * 
                     DifferentColors(x, y);
                     // Generate pieces with every other row having an offset.
                     if (x % 2 == 0)
                     {
-                        Instantiate(prefab, new Vector2(y * offsetY, x * offsetX), Quaternion.Euler(90, 0, 0));
+                        GameObject chosenPiece = Instantiate(prefab, new Vector2(y * offsetY, x * offsetX), Quaternion.Euler(90, 0, 0));
+                        //Instantiate(prefab, new Vector2(y * offsetY, x * offsetX), Quaternion.Euler(90, 0, 0));
+
+
+                        if (prefab == emptyPrefab)
+                        {
+                            chosenPiece.GetComponent<Pieces>().colour = Piece.Empty;
+                        }
+                        else if (prefab == redPrefab)
+                        {
+                            chosenPiece.GetComponent<Pieces>().colour = Piece.Red;
+                        }
+                        else if (prefab == greenPrefab)
+                        {
+                            chosenPiece.GetComponent<Pieces>().colour = Piece.Green;
+                        }
+
+
+                        /*
+                        switch (prefab)
+                        {
+                            case emptyPrefab:
+                                chosenPiece.GetComponent<Pieces>().color = Piece.Empty;
+                                break;
+                        }
+                        */
+                        chosenPiece.name = "Piece." + x + ". " + y;
+
+                        chosenPiece.GetComponent<Pieces>().x = x;
+                        chosenPiece.GetComponent<Pieces>().y = y;
+
+                        chosenPiece.transform.SetParent(this.transform);
                     }
                     else
                     {
-                        Instantiate(prefab, new Vector2(y * offsetY + offsetUnevenRows, x * offsetX), Quaternion.Euler(90, 0, 0));
+                        //Instantiate(prefab, new Vector2(y * offsetY + offsetUnevenRows, x * offsetX), Quaternion.Euler(90, 0, 0));
+                        GameObject chosenPiece = Instantiate(prefab, new Vector2(y * offsetY + offsetUnevenRows, x * offsetX), Quaternion.Euler(90, 0, 0));
+                        //Instantiate(prefab, new Vector2(y * offsetY, x * offsetX), Quaternion.Euler(90, 0, 0));
+
+                        chosenPiece.name = "Piece." + x + ". " + y;
+
+                        chosenPiece.GetComponent<Pieces>().x = x;
+                        chosenPiece.GetComponent<Pieces>().y = y;
+
+                        chosenPiece.transform.SetParent(this.transform);
+
+                        chosenPiece.isStatic = true;
                     }
                 }
+
             }
         }
-
     }
+
     /// <summary>
     /// Checks what color that should be instantiated.
     /// </summary>
@@ -244,7 +372,7 @@ public class InstantiateBoard : MonoBehaviour
         board[3, 5] = Piece.Red;
         board[3, 6] = Piece.Red;
         board[3, 7] = Piece.Red;
-    }                                
+    }
     private void TopBlue()
     {
         board[16, 6] = Piece.Blue;
@@ -257,7 +385,7 @@ public class InstantiateBoard : MonoBehaviour
         board[13, 5] = Piece.Blue;
         board[13, 6] = Piece.Blue;
         board[13, 7] = Piece.Blue;
-    }                                  
+    }
     private void LowLeftGreen()
     {
         board[4, 0] = Piece.Green;
@@ -270,23 +398,23 @@ public class InstantiateBoard : MonoBehaviour
         board[6, 1] = Piece.Green;
         board[6, 2] = Piece.Green;
         board[7, 1] = Piece.Green;
-    }                            
+    }
     private void LowRightYellow()
     {
-        board[4, 9]  = Piece.Yellow;
+        board[4, 9] = Piece.Yellow;
         board[4, 10] = Piece.Yellow;
         board[4, 11] = Piece.Yellow;
         board[4, 12] = Piece.Yellow;
-        board[5, 9]  = Piece.Yellow;
+        board[5, 9] = Piece.Yellow;
         board[5, 10] = Piece.Yellow;
         board[5, 11] = Piece.Yellow;
         board[6, 10] = Piece.Yellow;
         board[6, 11] = Piece.Yellow;
         board[7, 10] = Piece.Yellow;
-    }                          
+    }
     private void UpLeftPurple()
     {
-        board[9, 1]  = Piece.Purple;
+        board[9, 1] = Piece.Purple;
         board[10, 1] = Piece.Purple;
         board[10, 2] = Piece.Purple;
         board[11, 0] = Piece.Purple;
@@ -296,20 +424,20 @@ public class InstantiateBoard : MonoBehaviour
         board[12, 1] = Piece.Purple;
         board[12, 2] = Piece.Purple;
         board[12, 3] = Piece.Purple;
-    }                            
+    }
     private void UpRightOrange()
     {
-        board[9, 10]  = Piece.Orange;
+        board[9, 10] = Piece.Orange;
         board[10, 10] = Piece.Orange;
         board[10, 11] = Piece.Orange;
-        board[11, 9]  = Piece.Orange;
+        board[11, 9] = Piece.Orange;
         board[11, 10] = Piece.Orange;
         board[11, 11] = Piece.Orange;
-        board[12, 9]  = Piece.Orange;
+        board[12, 9] = Piece.Orange;
         board[12, 10] = Piece.Orange;
         board[12, 11] = Piece.Orange;
         board[12, 12] = Piece.Orange;
-    }                           
+    }
 
     private void TryMove()
     {

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 23050708309046452}
   - component: {fileID: 136172173581959128}
   - component: {fileID: 114383586645088672}
+  - component: {fileID: 114376154930338532}
   m_Layer: 0
   m_Name: GreenPiece
   m_TagString: Untagged
@@ -85,6 +86,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1281471846218138}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114376154930338532
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1281471846218138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9e8cc0c332ec7c43b102ee8060c03ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colour: 0
+  x: 0
+  y: 0
 --- !u!114 &114383586645088672
 MonoBehaviour:
   m_ObjectHideFlags: 1
